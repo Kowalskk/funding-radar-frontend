@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   description: "Real-time perpetual DEX funding rate aggregator. Find delta-neutral arbitrage across Hyperliquid, Aster, and more.",
 };
 
+import { Providers } from "@/components/Providers";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,7 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${outfit.variable} ${jetbrainsMono.variable} font-display`}>
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
