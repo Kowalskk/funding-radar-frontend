@@ -94,17 +94,18 @@ export default function ArbitrageList({ wsUpdate }: { wsUpdate: any }) {
               </div>
             </div>
           </div>
-        ))}
+        );
+      })}
 
-        {opportunities.length === 0 && (
-          <div className="p-12 border border-dashed border-white/10 rounded-2xl text-center space-y-4">
-            <AlertCircle className="w-12 h-12 text-gray-600 mx-auto" />
-            <div>
-              <p className="text-gray-400 font-medium">Scanning for low-risk spreads...</p>
-              <p className="text-xs text-gray-500 mt-1">Spreads appear when the funding rate difference exceeds 5% APR.</p>
-            </div>
+      {opportunities.length === 0 && (
+        <div className="p-12 border border-dashed border-white/10 rounded-2xl text-center space-y-4">
+          <AlertCircle className="w-12 h-12 text-gray-600 mx-auto" />
+          <div>
+            <p className="text-gray-400 font-medium">Scanning for low-risk spreads...</p>
+            <p className="text-xs text-gray-500 mt-1">Spreads appear when the funding rate difference exceeds 5% APR.</p>
           </div>
-        )}
+        </div>
+      )}
     </div>
   );
 }

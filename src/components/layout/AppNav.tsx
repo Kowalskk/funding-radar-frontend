@@ -8,7 +8,7 @@ interface AppNavProps {
   wsStatus: ConnectionStatus;
 }
 
-export const AppNav = ({ activeTab, onTabChange, wsStatus }: AppNavProps) => {
+const AppNav = ({ activeTab, onTabChange, wsStatus }: AppNavProps) => {
   return (
     <nav className="sticky top-0 z-[100] flex items-center justify-between px-6 py-3 bg-surface border-b border-border backdrop-blur-xl">
       <div className="flex items-center gap-3">
@@ -63,3 +63,5 @@ export const AppNav = ({ activeTab, onTabChange, wsStatus }: AppNavProps) => {
     </nav>
   );
 };
+
+export default AppNav;
